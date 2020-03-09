@@ -1,0 +1,6 @@
+div.hot  .el-tabs__nav-scroll div.el-tabs__item{
+  &: first-child{
+    padding-left: 20px!important;
+    background: #42b983;
+  }
+}

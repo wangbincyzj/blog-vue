@@ -1,18 +1,24 @@
 <template>
     <div id="headerNav">
-        header
+        <Header/>
     </div>
 </template>
 
 <script>
+  import Header from "@/views/header/Header";
   export default {
-    name: "HeaderNav"
+    name: "HeaderNav",
+    components: {Header},
+    data() {
+      return{
+        username: "",
+      }
+    },
   }
 </script>
 
 <style scoped lang="scss">
     #headerNav{
-        height: 50px;
-        background-color: #ff5330;
+
     }
 </style>

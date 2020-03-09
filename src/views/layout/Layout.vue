@@ -1,22 +1,26 @@
 <template>
-    <div class="layout">
-        <el-row>
-            <el-col :span="24">
-                <HeaderNav/>
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col  :xs="1" :sm="12" >
-                <LeftNav/>
-            </el-col>
-            <el-col   :xs="23" :sm="12">
-                <Main/>
-            </el-col>
-            <el-col :span="4" :sm="0">
-                <RightNav/>
-            </el-col>
-        </el-row>
-    </div>
+  <div class="layout" v-if="$store.state.username">
+    <!--头部-->
+    <HeaderNav/>
+    <el-row>
+
+      <!--左边nav-->
+      <el-col :span="4">
+        <LeftNav/>
+      </el-col>
+
+      <!--中间主体内容-->
+      <el-col :span="16">
+        <Main/>
+      </el-col>
+
+      <!--右边nav-->
+      <el-col :span="4">
+        <RightNav/>
+      </el-col>
+
+    </el-row>
+  </div>
 </template>
 
 <script>
@@ -24,6 +28,7 @@
   import LeftNav from "@/views/layout/LeftNav";
   import Main from "@/views/layout/Main";
   import RightNav from "@/views/layout/RightNav";
+
   export default {
     name: "Layout",
     components: {RightNav, Main, LeftNav, HeaderNav}
@@ -31,8 +36,7 @@
 </script>
 
 <style scoped lang="scss">
-    div.layout{
-        height: 300px;
-        background-color: #42b983;
-    }
+  div.layout {
+    color: var(--text-color);
+  }
 </style>

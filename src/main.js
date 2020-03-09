@@ -11,6 +11,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI)
 
+// 伪数据
+import {ajax} from "@/utils/pAjax";
+Vue.prototype.$ajax = ajax;
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -18,3 +22,5 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+

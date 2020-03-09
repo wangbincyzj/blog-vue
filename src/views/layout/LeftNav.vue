@@ -1,15 +1,19 @@
 <template>
-    <div id="leftNav">123</div>
+    <div id="leftNav">
+      <Left/>
+    </div>
 </template>
 
 <script>
+  import Left from "@/views/left/Left";
   export default {
-    name: "LeftNav"
+    name: "LeftNav",
+    components:{Left}
   }
 </script>
 
 <style scoped>
     #leftNav{
-        background-color: #323233;
+
     }
 </style>
